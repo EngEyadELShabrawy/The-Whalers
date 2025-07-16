@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>loading...</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1c1c1c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loader {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bar {
+      height: 12px; /* أكبر من قبل */
+      border-radius: 6px;
+      animation: move 1.2s ease-in-out infinite;
+    }
+
+    .bar:nth-child(1) { width: 80px; background: #ff0066; animation-delay: 0s; }
+    .bar:nth-child(2) { width: 75px; background: #00f2ea; animation-delay: 0.1s; }
+    .bar:nth-child(3) { width: 70px; background: #00ff87; animation-delay: 0.2s; }
+    .bar:nth-child(4) { width: 65px; background: #ffee00; animation-delay: 0.3s; }
+    .bar:nth-child(5) { width: 60px; background: #444; animation-delay: 0.4s; }
+    .bar:nth-child(6) { width: 65px; background: #ff6600; animation-delay: 0.5s; }
+    .bar:nth-child(7) { width: 70px; background: #6633cc; animation-delay: 0.6s; }
+
+    @keyframes move {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(40px);
+      }
+    }
+  </style>
+
+  <script>
+    // إعادة التوجيه بعد 3 ثوانٍ
+    setTimeout(function () {
+      window.location.href = "Whalers.html";
+    }, 3000);
+  </script>
+</head>
+<body>
+  <div class="loader">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>
